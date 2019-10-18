@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deplomyent
+spec:
+  replicas: 3  
+  selector:
+    matchLabels:
+      component: server
+  template:
+    metadata:
+      labels:
+        component: server
+    spec:
+      containers:
+        - name: server
+          image: tagname/name
+          ports:
+            - containerPort: 5000   
